@@ -1,15 +1,29 @@
 package com.code.rai;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class TryAndErase {
     public static void main(String[] args) {
-      String rev = "I am going to hell.";
-        System.out.println("Reverse will be : " + "\n" +reverse(rev));
-    }
-    public static String reverse(String str){
-        if(str.isEmpty() || str == null){
-            return str;
+        int m = 50;
+        System.out.println("Prime number for " + m + " terms:");
+        for (int i = 2; i <= m; i++) {
+            if (isPrime(i)) {
+                System.out.print(i + " ");
+            }
         }
-        StringBuilder sb = new StringBuilder(str);
-        return sb.reverse().toString();
+    }
+
+    public static boolean isPrime(int n) {
+        if (n <= 1) {
+            return false;
+        }
+        for (int i = 2; i < n/2; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
