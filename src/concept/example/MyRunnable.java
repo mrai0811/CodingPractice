@@ -2,7 +2,7 @@ package concept.example;
 
 public class MyRunnable implements Runnable{
     public void run() {
-        System.out.println("Runnable running in: " + Thread.currentThread().getName());
+        System.out.println("Runnable running in thread : " + Thread.currentThread().getName());
     }
 
     public static void main(String[] args) {
